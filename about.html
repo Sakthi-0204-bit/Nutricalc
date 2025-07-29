@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NutriCalc</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Verdana', sans-serif;
+            color: #f4f4f4;
+            background-color: #101010;
+        }
+
+        #content-overlay {
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #ffeb3b; /* Gold color */
+            text-shadow: 0 0 20px #ffeb3b, 0 0 40px #e6b800;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #cfcfcf;
+        }
+
+        main {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #ffeb3b;
+            text-shadow: 0 0 10px #ffeb3b, 0 0 20px #e6b800;
+        }
+
+        section p {
+            color: #d6d6d6;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        section img {
+            max-width: 100%;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        /* Button for navigation */
+        #back-button {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            color: #101010;
+            background: #ffeb3b;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        #back-button:hover {
+            background: #e6b800;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="content-overlay">
+        <!-- Header Section -->
+        <header>
+            <h1>About Us</h1>
+            <p>Discover the team behind NutriCalc</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <section>
+                <h2>About the Creator</h2>
+                <p>
+                    Hello! My name is Sakthi, the creator of NutriCalc. I'm passionate about 
+                    promoting healthy living and making nutrition more accessible to everyone. 
+                    With a background in  web development, I have always been fascinated 
+                    by the science of food and its impact on our well-being.
+                </p>
+                <p>
+                    NutriCalc was born out of my desire to help people make informed choices about their meals. 
+                    By providing an easy-to-use calorie calculator and comprehensive food descriptions, my goal is to 
+                    empower you with the knowledge you need to maintain a balanced and healthy lifestyle.
+                </p>
+                <img src="your-photo.jpg" alt="Your Photo">
+            </section>
+
+            <section>
+                <h2>Our Mission</h2>
+                <p>
+                    At NutriCalc, our mission is simple: to help you understand your food better and make smarter dietary 
+                    decisions. We believe that health starts with awareness, and we're here to guide you on your journey.
+                </p>
+            </section>
+
+            <!-- Back Button -->
+            <a href="home.html" id="back-button">← Back to Home</a>
+        </main>
+    </div>
+</body>
+</html>

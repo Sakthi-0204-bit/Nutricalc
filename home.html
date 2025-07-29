@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriCalc - Calorie Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Verdana', sans-serif;
+            color: #f4f4f4;
+            background-color: #101010;
+            overflow-x: hidden;
+        }
+
+        /* Background Image */
+        #background-image-container {
+            background: url('your-background-image.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Content Overlay */
+        #content-overlay {
+            background: rgba(0, 0, 0, 0.8); /* Dark transparent overlay */
+            min-height: 100%;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Go to Home Button */
+        #home-button {
+            position: fixed;
+            top: 20px; /* Adjust this value to place it near the header */
+            left: 20px;
+            background: #242424;
+            color: #e6b800; /* Gold color */
+            font-size: 1.5rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: 2px solid #e6b800;
+            transition: background 0.3s, transform 0.2s;
+            z-index: 1000;
+        }
+
+        #home-button i {
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+
+        #home-button:hover {
+            background: #e6b800; /* Gold background on hover */
+            color: #101010; /* Dark text on hover */
+            transform: scale(1.1);
+        }
+
+        /* Horizontal Menu Styling */
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px 15px;
+            border: 2px solid #e6b800;
+            border-radius: 10px;
+            background: linear-gradient(145deg, #242424, #181818);
+            color: #ffeb3b; /* Gold color */
+            transition: transform 0.2s ease, background 0.3s ease;
+            text-align: center;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background: linear-gradient(145deg, #ffeb3b, #e6b800);
+            color: #101010; /* Dark text on hover */
+            transform: scale(1.1);
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            color: #ffeb3b; /* Gold color */
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px #ffeb3b, 0 0 40px #e6b800;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #cfcfcf;
+        }
+
+        /* Main Sections */
+        main {
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main section {
+            margin: 40px auto;
+            padding: 30px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            max-width: 700px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        main section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(255, 235, 59, 0.7);
+        }
+
+        main section h2 {
+            color: #ffeb3b; /* Gold color */
+            text-shadow: 0 0 10px #ffeb3b, 0 0 20px #e6b800;
+        }
+
+        main section p {
+            color: #d6d6d6;
+            margin: 10px 0 20px;
+        }
+
+        main section button {
+            padding: 10px 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            color: #101010;
+            background: #ffeb3b; /* Gold background */
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        main section button:hover {
+            background: #e6b800; /* Dark gold on hover */
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                top: 10px;
+                left: 10px;
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                display: block;
+                gap: 10px;
+            }
+
+            nav ul li {
+                display: block;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            main section {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="background-image-container">
+        <div id="content-overlay">
+            <!-- Home Button -->
+            <a href="index.html" id="home-button">
+                <i class="fas fa-home"></i> Home
+            </a>
+
+            <!-- Horizontal Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a href="#calculator-section">Calculator</a></li>
+                    <li><a href="#food-descriptions-section">Food Descriptions</a></li>
+                    <li><a href="#about-us-section">About Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Section -->
+            <header>
+                <h1>Welcome to NutriCalc</h1>
+                <p>Your Personal Calorie & Nutrition Calculator</p>
+            </header>
+
+            <!-- Main Content -->
+            <main>
+                <section id="calculator-section">
+                    <h2>Calorie Calculator</h2>
+                    <p>Calculate the nutritional value of your meals with ease. Click below to get started.</p>
+                    <button onclick="window.location.href='index.html'">Go to Calculator</button>
+                </section>
+
+                <section id="food-descriptions-section">
+                    <h2>Food Descriptions</h2>
+                    <p>Explore detailed descriptions of various foods, their benefits, and nutritional facts.</p>
+                    <button onclick="window.location.href='food.html'">Learn More</button>
+                </section>
+
+                <section id="about-us-section">
+                    <h2>About Us</h2>
+                    <p>At NutriCalc, we are passionate about helping you make healthy choices by understanding the nutritional values of your food. Our team of experts provides accurate and up-to-date information on calories and nutrients to help you live your best life.</p>
+                    <button onclick="window.location.href='about.html'">Read More</button>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- FontAwesome for the Home Icon -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>

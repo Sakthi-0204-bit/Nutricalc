@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background-image-container">
+        <div id="content-overlay">
+            <header>
+                <h1>Calorie Calculator</h1>
+            </header>
+            <main>
+                <div class="content-grid">
+                    <div class="dish-input">
+                        <input type="text" id="dish-name" placeholder="Enter Dish Name">
+                    </div>
+                    <div id="ingredient-container">
+                        <!-- Ingredient slots will be added dynamically here -->
+                    </div>
+                    <div class="buttons">
+                        <button onclick="addIngredientSlot()">Add Ingredient Slot</button>
+                        <button onclick="calculateTotalCalories()">Calculate Total Calories</button>
+                    </div>
+                    <p id="total-calories">Total Calories: 0 kcal</p>
+                    
+                   
+                
+            <!-- Back Button -->
+            <a href="home.html" id="back-button">← Back to Home</a>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
