@@ -26,7 +26,7 @@ To get the project up and running, simply follow these steps:
     ```
 2.  **Navigate to the project directory**:
     ```bash
-    cd My-project-main
+    cd Nutricalc
     ```
 3.  **Open the website**:
     Open the `index.html` file in your preferred web browser to view the calorie calculator, or open `home.html` to start from the main landing page.
