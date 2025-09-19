@@ -55,7 +55,7 @@ To get the project up and running, simply follow these steps:
   * **CSS3**: For styling, including the unique gold-themed design and responsive elements.
   * **JavaScript (ES6+)**: To handle the interactive functionality of the calorie calculator.
 
------
+------
 
 ### Acknowledgements
 
