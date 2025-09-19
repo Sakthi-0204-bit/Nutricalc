@@ -4,7 +4,7 @@
 
 **NutriCalc** is a modern and intuitive web application designed to empower users with the knowledge they need to make informed dietary choices. It features a powerful calorie calculator and a comprehensive database of food items, all presented in a clean and elegant interface. This project was developed with a focus on simplicity, functionality, and user experience.
 
------
+------
 
 ### Features
 
